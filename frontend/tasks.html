@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Tasks</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <aside class="sidebar">
+            <h2>Task Manager</h2>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="tasks.html" class="nav-link active">Tasks</a>
+                <a href="completed.html" class="nav-link">Completed Tasks</a>
+                <a href="view_task.html" class="nav-link">View Task</a>
+            </nav>
+        </aside>
+        <main>
+            <div class="header">
+                <h1>Manage Tasks</h1>
+            </div>
+
+            <!-- Filter and Sort Options -->
+            <div class="filters">
+                <label for="sort">Sort By:</label>
+                <select id="sort">
+                    <option value="date">Date</option>
+                    <option value="alphabet">Alphabetical</option>
+                </select>
+                <button onclick="toggleCompletedFilter()">Show Completed</button>
+            </div>
+
+            <!-- Task Form -->
+            <form id="taskForm">
+                <input type="text" id="title" placeholder="Task Title" required />
+                <textarea id="description" placeholder="Task Description"></textarea>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <!-- Task List -->
+            <ul id="taskList"></ul>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
